@@ -43,3 +43,27 @@ http://localhost:7007
 http://localhost:7007/?bands=7
 
 Press the connect button while music playing, it will start moving.
+
+## Developer Details
+The Hookedup LED Application provides for a WebSocket connection, see demo code for how to do that
+The WebSocket sends the following data:
+pos = Position: The position where the long is, in case you want to changes stuff based on the position in the song
+vol = volume (0-255)
+beats = beat values in this order
+ - kick cycling color value (0-255)
+ - snare cycling color value (0-255)
+ - hat cycling color value (0-255)
+ - kick actual value (0-1024)
+ - snare actual value (0-1024)
+ - hat actual value (0-1024)
+ - b7 = bands (broken into 7) 0=Lowest Band, 7=Highest
+ - b30 = bands (broken into 30) 0=Lowest Band, 30=Highest
+
+Sample:  
+{
+  pos:10000,
+  vol:255,
+  beats:[1,2,3,4,5,6]
+  b7:[1,2,3,4,5,6,7],
+  b30:[1..30]
+}
