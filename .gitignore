@@ -1,0 +1,9 @@
+apps/
+launchConfigurations/
+.idea/
+node_modules/
+reports/
+dist/
+logs/
+/*.zip
+/*.zip.version
