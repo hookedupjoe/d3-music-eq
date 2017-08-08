@@ -185,7 +185,8 @@
 			var svg = d3.select("svg"),
 				width = +svg.attr("width"),
 				height = +svg.attr("height"),
-				g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+				g1 = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+			var g = g1.append("g").attr("transform", "rotate(-90)");
 
 			var star = svg.selectAll("[use='star']");
 			var starwrap = svg.selectAll("[use='starwrap']");
