@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="lib/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="/lib/jstree/dist/themes/default/style.min.css" />
+
+  <link rel="stylesheet" href="css/appframe.css">
+
+  <title>SVG Playground</title>
+
+</head>
+
+<body appuse="appbody">
+
+  <!-- Sidebar Menu -->
+  <div appuse="sidemenu" class="ui vertical inverted sidebar menu">
+    <a appaction="loadSVG" class="mobileonly active item">Load SVG</a>
+    <a pagename="workspace" appaction="showPage" class="mobileonly item">Dashboard</a>
+    <a pagename="coolbutton" appaction="showPage" class="mobileonly item">Cool Button</a>
+    <a pagename="about" appaction="showPage" class="item">About this demo</a>
+  </div>
+
+
+  <!-- Page Contents -->
+  <div class="appbody pusher">
+
+    <div class=" ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container">
+
+        <div appuse="topmenu" class="ui large secondary inverted pointing menu">
+          <a semaction="showsidebar" class="toc item">
+          <i class="sidebar icon"></i>
+		</a>
+          <a semaction="showsidebar" class=" item">
+          <i class="sidebar icon"></i>
+		</a>
+          <a pagename="workspace" appaction="showPage" class="active item">Dashboard</a>
+          <a pagename="coolbutton" appaction="showPage" class="item">Cool Button</a>
+
+          <!--        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+
+-->
+          <div class="right item">
+            <a appaction="loadSVG" class="ui inverted button">Load SVG</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Body Here -->
+    <div class="ui segment basic inverted" style="padding:0;margin:0">
+      <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+          <div class="column">
+
+            <svg class="hidden" svgname="coolbutton" pagefor="coolbutton" style="padding:0;margin:0" viewBox="0 0 400 400">
+              <defs id="defs2">
+
+                <linearGradient x1="1430.5" y1="1076.6" x2="1430.5" gradientUnits="userSpaceOnUse" y2="656.17999" id="Gradient_18-4">
+                  <stop id="stop6752-4" offset="0" stop-color="#FFFFFF" />
+                  <stop id="stop6754-1" offset=".496" stop-color="#6A6A6A" />
+                  <stop id="stop6756-1" offset=".793" stop-color="#FFFFFF" />
+                  <stop id="stop6758-2" offset="1" stop-color="#555555" />
+                </linearGradient>
+                <linearGradient x1="1429.8" y1="1121.3" x2="1429.8" gradientUnits="userSpaceOnUse" y2="607.58002" id="Gradient_17-8">
+                  <stop id="stop6743-1" offset="0" stop-color="#555555" />
+                  <stop id="stop6745-3" offset=".207" stop-color="#FFFFFF" />
+                  <stop id="stop6747-9" offset=".504" stop-color="#6A6A6A" />
+                  <stop id="stop6749-3" offset="1" stop-color="#FFFFFF" />
+                </linearGradient>
+
+                <radialGradient r="250.91" cx="1434.2" cy="739.52002" gradientUnits="userSpaceOnUse" id="gradientButton1">
+                  <stop id="stop6761-7" offset="0" stop-color="#FFFFFF" />
+
+                  <stop id="buttoncolorstop1" offset="1" stop-color="green" />
+                </radialGradient>
+                <radialGradient r="250.91" cx="1434.2" cy="739.52002" gradientUnits="userSpaceOnUse" id="gradientButton2">
+                  <stop id="stop6761-7" offset="0" stop-color="#FFFFFF" />
+
+                  <stop id="buttoncolorstop2" offset="1" stop-color="blue" />
+                </radialGradient>
+
+              </defs>
+
+              <g appuse="coolbuttonwrap" transform="scale(8)">
+
+                <g appaction="buttonClick" colorstopid="buttoncolorstop1" id="g6564" transform="matrix(0.01544276,0,0,0.01544276,-17.220039,-8.6878977)">
+                  <path appaction="buttonClick" style="fill:url(#Gradient_17-8)" inkscape:connector-curvature="0" d="m 1433.4,1123.8 c -137.4,0 -248.8,-111.4 -248.8,-248.79 0,-137.42 111.4,-248.82 248.8,-248.82 137.4,0 248.8,111.4 248.8,248.82 0,137.39 -111.4,248.79 -248.8,248.79 z"
+                    id="path6552" />
+                  <path appaction="buttonClick" style="fill:url(#Gradient_18-4)" inkscape:connector-curvature="0" d="m 1433.4,1078.6 c -112.4,0 -203.6,-91.15 -203.6,-203.59 0,-112.45 91.2,-203.6 203.6,-203.6 112.4,0 203.6,91.15 203.6,203.6 0,112.44 -91.2,203.59 -203.6,203.59 z"
+                    id="path6554" />
+                  <path appaction="buttonClick" style="fill:#000000" inkscape:connector-curvature="0" d="m 1433.4,1063.7 c -104.2,0 -188.7,-84.49 -188.7,-188.69 0,-104.2 84.5,-188.67 188.7,-188.67 104.2,0 188.7,84.47 188.7,188.67 0,104.2 -84.5,188.69 -188.7,188.69 z"
+                    id="path6556" />
+                  <path appaction="buttonClick" style="fill:url(#gradientButton1)" inkscape:connector-curvature="0" d="m 1433.4,1051.5 c -97.5,0 -176.5,-79.03 -176.5,-176.49 0,-97.47 79,-176.47 176.5,-176.47 97.5,0 176.5,79 176.5,176.47 0,97.46 -79,176.49 -176.5,176.49 z"
+                    id="path6558" />
+                  <path appaction="buttonClick" style="opacity:0.28999999;fill:#ffffff" inkscape:connector-curvature="0" d="m 1431.8,626.19 c 14.8,-0.11 29.5,1.46 44.1,3.89 67.7,12.08 128.4,52.94 165.5,110.82 11.6,17.75 20.5,37.04 27.1,57.13 -11.7,14.49 -25.7,27 -40.8,37.8 -2.8,2 -5.7,3.87 -8.6,5.8 v -0.02 c -1.6,-9.2 -3.9,-18.26 -6.9,-27.11 -14.7,-43.28 -45.3,-80.4 -84.9,-103.16 -29.3,-16.87 -60.2,-24.58 -93.9,-25 -35.9,0.02 -71.4,10.33 -101.7,29.72 -35.9,22.99 -63.4,58.07 -77.1,98.44 -3.1,9.4 -5.7,19.14 -7.2,28.96 -19.5,-12.37 -37.8,-27.3 -52.2,-45.4 3.4,-9.76 3.9,-11.78 8.2,-21.77 21.5,-49.42 58.1,-90.03 104.6,-117.13 28.3,-16.28 59.7,-26.86 92.1,-30.97 8.4,-1.22 16.9,-1.5 25.3,-1.92 z"
+                    id="path6560" />
+                  <path appaction="buttonClick" style="opacity:0.21000001;fill:#ffffff" inkscape:connector-curvature="0" d="m 1431.8,698.54 c 51.4,0.2 99.8,22.12 133.5,60.98 18.7,21.62 32,47.75 38.5,75.63 1.6,7.02 1.7,8.09 2.6,14.46 -42.7,24.44 -91.2,37.8 -140.1,42.03 -11.5,0.99 -23,1.38 -34.5,1.48 -53.7,-0.19 -108,-10.45 -156.6,-33.96 -8.8,-4.26 -10.1,-5.14 -18,-9.55 8.7,-59.47 47.2,-110.71 102,-135.49 15.9,-7.18 32.8,-11.97 50.1,-14.17 8,-1 10,-0.95 18,-1.36 z"
+                    id="path6562" />
+                </g>
+
+                <g appaction="buttonClick" colorstopid="buttoncolorstop2" id="g6564" transform="matrix(0.01544276,0,0,0.01544276,10.220039,-8.6878977)">
+                  <path appaction="buttonClick" style="fill:url(#Gradient_17-8)" inkscape:connector-curvature="0" d="m 1433.4,1123.8 c -137.4,0 -248.8,-111.4 -248.8,-248.79 0,-137.42 111.4,-248.82 248.8,-248.82 137.4,0 248.8,111.4 248.8,248.82 0,137.39 -111.4,248.79 -248.8,248.79 z"
+                    id="path6552" />
+                  <path appaction="buttonClick" style="fill:url(#Gradient_18-4)" inkscape:connector-curvature="0" d="m 1433.4,1078.6 c -112.4,0 -203.6,-91.15 -203.6,-203.59 0,-112.45 91.2,-203.6 203.6,-203.6 112.4,0 203.6,91.15 203.6,203.6 0,112.44 -91.2,203.59 -203.6,203.59 z"
+                    id="path6554" />
+                  <path appaction="buttonClick" style="fill:#000000" inkscape:connector-curvature="0" d="m 1433.4,1063.7 c -104.2,0 -188.7,-84.49 -188.7,-188.69 0,-104.2 84.5,-188.67 188.7,-188.67 104.2,0 188.7,84.47 188.7,188.67 0,104.2 -84.5,188.69 -188.7,188.69 z"
+                    id="path6556" />
+                  <path appaction="buttonClick" style="fill:url(#gradientButton2)" inkscape:connector-curvature="0" d="m 1433.4,1051.5 c -97.5,0 -176.5,-79.03 -176.5,-176.49 0,-97.47 79,-176.47 176.5,-176.47 97.5,0 176.5,79 176.5,176.47 0,97.46 -79,176.49 -176.5,176.49 z"
+                    id="path6558" />
+                  <path appaction="buttonClick" style="opacity:0.28999999;fill:#ffffff" inkscape:connector-curvature="0" d="m 1431.8,626.19 c 14.8,-0.11 29.5,1.46 44.1,3.89 67.7,12.08 128.4,52.94 165.5,110.82 11.6,17.75 20.5,37.04 27.1,57.13 -11.7,14.49 -25.7,27 -40.8,37.8 -2.8,2 -5.7,3.87 -8.6,5.8 v -0.02 c -1.6,-9.2 -3.9,-18.26 -6.9,-27.11 -14.7,-43.28 -45.3,-80.4 -84.9,-103.16 -29.3,-16.87 -60.2,-24.58 -93.9,-25 -35.9,0.02 -71.4,10.33 -101.7,29.72 -35.9,22.99 -63.4,58.07 -77.1,98.44 -3.1,9.4 -5.7,19.14 -7.2,28.96 -19.5,-12.37 -37.8,-27.3 -52.2,-45.4 3.4,-9.76 3.9,-11.78 8.2,-21.77 21.5,-49.42 58.1,-90.03 104.6,-117.13 28.3,-16.28 59.7,-26.86 92.1,-30.97 8.4,-1.22 16.9,-1.5 25.3,-1.92 z"
+                    id="path6560" />
+                  <path appaction="buttonClick" style="opacity:0.21000001;fill:#ffffff" inkscape:connector-curvature="0" d="m 1431.8,698.54 c 51.4,0.2 99.8,22.12 133.5,60.98 18.7,21.62 32,47.75 38.5,75.63 1.6,7.02 1.7,8.09 2.6,14.46 -42.7,24.44 -91.2,37.8 -140.1,42.03 -11.5,0.99 -23,1.38 -34.5,1.48 -53.7,-0.19 -108,-10.45 -156.6,-33.96 -8.8,-4.26 -10.1,-5.14 -18,-9.55 8.7,-59.47 47.2,-110.71 102,-135.49 15.9,-7.18 32.8,-11.97 50.1,-14.17 8,-1 10,-0.95 18,-1.36 z"
+                    id="path6562" />
+                </g>
+              </g>
+            </svg>
+
+            <svg svgname="workspace" pagefor="workspace" style="padding:0;margin:0" viewBox="0 0 800 800">
+              <g appuse="objwrap" transform="scale(8)">
+
+
+              </g>
+            </svg>
+            <div pagefor="about" class="hidden">See links for more stuff</div>
+          </div>
+          <div class="column">
+            <div pagefor="coolbutton" class="hidden">This is a SVG Cool Button created using D3.</div>
+            <div pagefor="workspace" class="whitearea">
+              <h3 class="hidden">On Stage</h3>
+
+              <div  class="hidden" id="ajax" class="demo"></div>
+              
+              <svg id="svgControlPanel" svgname="controls" style="width:100%;background-color:white;max-height:400px;padding:0;margin:0"   viewBox="0 0 600 600" >
+             
+            </svg>
+
+            </div>
+
+            <div pagefor="about" class="hidden">This application was created by Joseph Francis.</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- End Body -->
+
+    <!-- Footer -->
+    <div class="hidden ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="three wide column">
+            <h4 class="ui inverted header">Left</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">Left One</a>
+              <a href="#" class="item">Left Two</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">Center</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">Center One</a>
+              <a href="#" class="item">Center Two</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header">Wide Right</h4>
+            <p>Laces Out!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!--   End of page *****************************************  -->
+
+  <script src="lib/base/jquery.min.js"></script>
+  <script src="lib/base/lodash.min.js"></script>
+  <script src="lib/base/angular.min.js"></script>
+  <script src="lib/semantic/dist/semantic.min.js"></script>
+  <script src="lib/d3/d3.min.js"></script>
+  <script src="/lib/jstree/dist/jstree.min.js"></script>
+  <script src="/lib/snap/dist/snap.svg-min.js"></script>
+
+  <script>
+
+
+(function() {
+
+Snap.plugin( function( Snap, Element, Paper, global ) {
+
+
+    Element.prototype.getMatrix = function(  ) {
+        return this.node.transform.baseVal.getItem(0).matrix;
+    };
+
+    //angles in degrees
+    Element.prototype.skew = function( angleX, angleY ) {
+        var m = this.getMatrix();
+        m.b = Math.tan(angleY*Math.PI/180)
+        m.c = Math.tan(angleX*Math.PI/180)
+    };
+
+    Element.prototype.translate = function( x, y ) {
+        var m = this.getMatrix();
+        m.e = x;
+        m.f = y;
+    };
+
+    Element.prototype.scale = function( x, y ) {
+        var m = this.getMatrix();
+        m.a = x;
+        m.d = y;
+    };
+
+    Element.prototype.rotate = function( degrees) {
+        var m = this.getMatrix();
+        var a = degrees*Math.PI/180; 
+        m.a = Math.cos(a);
+        m.b = Math.sin(a);
+        m.c = -Math.sin(a);
+        m.d = Math.cos(a);
+    };
+});
+
+//---- Slider Pluging
+
+  Snap.plugin( function( Snap, Element, Paper, global ) {
+        var startDragTarget, startDragElement, startBBox, startScreenCTM;
+
+        // Initialise our slider with its basic transform and drag funcs
+
+
+        Element.prototype.initSlider = function( params ) {
+                        var emptyFunc = function() {};
+                        this.data('origTransform', this.transform().local );
+                        this.data('onDragEndFunc', params.onDragEndFunc || emptyFunc );
+                        this.data('onDragFunc', params.onDragFunc || emptyFunc );
+                        this.data('onDragStartFunc', params.onDragStartFunc || emptyFunc );
+                }
+
+        // initialise the params, and set up our max and min. Check if its a slider or knob to see how we deal
+
+        Element.prototype.sliderAnyAngle = function( params ) {
+                this.initSlider( params );
+                this.data("maxPosX", params.max); this.data("minPosX", params.min);
+                this.data("centerOffsetX", params.centerOffsetX); this.data("centerOffsetY", params.centerOffsetY)
+                this.data("posX", params.min);
+                if( params.type == 'knob' ) {
+                        this.drag( moveDragKnob, startDrag, endDrag );
+                } else {
+                        this.drag( moveDragSlider, startDrag, endDrag );
+                }
+        }
+
+        // load in the slider svg file, and transform the group element according to our params earlier.
+        // Also choose which id is the cap
+
+        Paper.prototype.slider = function( params ) {
+            var thisSlider = this;
+            
+                var myPaper = this,  myGroup;
+
+
+                var loaded = Snap.load( '/svg/elements/sliders/' + params.filename, function( frag ) {
+                                myGroup = myPaper.group().add( frag );
+                                myGroup.attr("appname",params.sliderId);
+                                myGroup.transform("t" + params.x + "," + params.y);
+                                var myCap = myGroup.select( params.capSelector );
+                                myCap.data("sliderId", params.sliderId);
+                                myCap.sliderAnyAngle( params );
+                                sliderSetAttributes( myGroup, params.attr );
+                                sliderSetAttributes( myCap, params.capattr );
+                                thisSlider.cap = myCap;
+                                
+
+                                                        } );
+
+                      
+                return myGroup;
+        }
+
+
+       // Extra func, to pass through extra attributes passed when creating the slider
+
+        function sliderSetAttributes ( myGroup, attr, data ) {
+                var myObj = {};
+                if( typeof attr != 'undefined' ) {
+                        for( var prop in attr ) {
+                                myObj[ prop ] = attr[prop];
+                                myGroup.attr( myObj );
+                                myObj = {};
+                        };
+                };
+        };
+
+        // Our main slider startDrag, store our initial matrix settings. 
+
+        var startDrag = function( x, y, ev ) {
+                startDragTarget = ev.target;
+                if( ! ( this.data("startBfBox") ) ) {
+                        this.data("startBBox", this.getBBox());
+                        this.data("startScreenCTM",startDragTarget.getScreenCTM());
+                }
+                this.data('origPosX', this.data("posX") ); this.data('origPosY', this.data("posY") );
+                this.data("onDragStartFunc")();
+        }
+
+
+        // move the cap, our dx/dy will need to be transformed to element matrx. Test for min/max
+        // set a value 'fracX' which is a fraction of amount moved 0-1 we can use later.
+        function updateMovement( el, dx, dy ) {
+                // Below relies on parent being the file svg element, 9
+                var snapInvMatrix = el.parent().transform().globalMatrix.invert();
+                snapInvMatrix.e = snapInvMatrix.f = 0;
+                var tdx = snapInvMatrix.x( dx,dy ), tdy = snapInvMatrix.y( dx,dy );
+
+                el.data("posX", +el.data("origPosX") + tdx) ; el.data("posY", +el.data("origPosY") + tdy);
+                var posX = +el.data("posX"); //var posY = +el.data("posY");
+                var maxPosX = +el.data("maxPosX");
+                var minPosX = +el.data("minPosX");
+
+                if( posX > maxPosX ) { el.data("posX", maxPosX ); };
+                if( posX < minPosX ) { el.data("posX", minPosX ); };
+                el.data("fracX", 1/ ( (maxPosX - minPosX) / el.data("posX") ) );
+        }
+
+
+        // Call the matrix checks above, and set any transformation
+
+        function moveDragSlider( dx,dy ) {
+                var posX;
+                updateMovement( this, dx, dy );
+                posX = this.data("posX");
+                this.attr({ transform: this.data("origTransform") + (posX ? "T" : "t") + [posX,0] });
+                this.data("onDragFunc")(this);
+        };
+
+        // drag our knob. Currently there is no min/max working, need to add a case for testing rotating anticlockwise beyond 0
+
+        function moveDragKnob( dx,dy,x,y, ev ) {
+                var pnt = startDragTarget.ownerSVGElement.createSVGPoint();
+                pnt.x = ev.clientX; pnt.y = ev.clientY;
+                var vPnt = pnt.matrixTransform(this.data("startScreenCTM").inverse());
+                var transformRequestObj = startDragTarget.ownerSVGElement.createSVGTransform();
+
+                var deg = Math.atan2(vPnt.x - this.data("startBBox").cx, vPnt.y - this.data("startBBox").cy) * 180 / Math.PI ;
+                deg = deg + 180;
+//              this.transform('r' + -deg + "," + ( this.data("startBBox").cx - 4 ) + "," + parseInt(this.data("startBBox").cy - -8)  );
+                this.transform('r' + -deg + "," + ( this.data("startBBox").cx - this.data("centerOffsetX") ) + "," + parseInt(this.data("startBBox").cy - -this.data("centerOffsetY") )  );
+                this.data("fracX", deg/360);
+                this.data("onDragFunc")(this);
+        }
+
+
+
+        function endDrag() {
+                this.data('onDragEndFunc')();
+        };
+
+  });
+
+})();
+
+//-----------------------------------
+
+    var PulletTypeSheep = function () {
+      var me = {};
+      me.strings = {};
+      
+      me.init = initPuppet;
+      function initPuppet(theParentSVG){
+          me.svg = theParentSVG;
+
+          d3.xml("/svg/elements/blank.svg", function (error, documentFragment) {
+            if (error) { console.log(error); return; }
+            var tmpSvgNode = documentFragment.getElementsByTagName("svg")[0];
+            tmpSvgNode.id = "sheep";
+            me.puppetSvg = d3.select(tmpSvgNode);
+            me.puppet = me.puppetSvg.select("#layer1");
+
+            me.svg.node().appendChild(tmpSvgNode);
+
+            d3.xml("/svg/actors/sheephead/sheep-head-left-ear.svg", function (error, documentFragment) {
+              if (error) { console.log(error); return; }
+              var tmpSvgNode = documentFragment.getElementsByTagName("svg")[0];
+              tmpSvgNode.id = "sheepears-left";
+              me.puppet.node().appendChild(tmpSvgNode);
+              me.leftEar = d3.select(tmpSvgNode);
+              me.strings.leftEar.pull(0);
+
+              //--- this loaded, now next ear
+
+
+
+              d3.xml("/svg/actors/sheephead/sheep-head-right-ear.svg", function (error, documentFragment) {
+                if (error) { console.log(error); return; }
+
+                var tmpSvgNode = documentFragment.getElementsByTagName("svg")[0];
+                tmpSvgNode.id = "sheepears-right";
+                me.puppet.node().appendChild(tmpSvgNode);
+                me.rightEar = d3.select(tmpSvgNode);
+                me.strings.rightEar.pull(0);
+
+                //--- Once we have this, add the next item
+                d3.xml("/svg/actors/sheephead/sheep-head-only.svg", function (error, documentFragment) {
+                  if (error) { console.log(error); return; }
+                  var tmpSvgNode = documentFragment.getElementsByTagName("svg")[0];
+                  tmpSvgNode.id = "sheepheadonly";
+                  me.puppet.node().appendChild(tmpSvgNode);
+                  me.head = d3.select(tmpSvgNode);
+                  me.hair = me.head.select("#hair");
+                  me.strings.hairColor.pull(0);
+
+                  me.pupils = me.head.select("#pupils");
+      //            me.strings.eyesUpDown.pull(0);
+
+                  ThisApp.puppets.sheep.strings.eyesUpDown.pull(0);
+                  ThisApp.puppets.sheep.strings.eyesLeftRight.pull(0);
+                  
+//me.puppet.attr("transform", "scale(1.2) translate(0,111)");
+                  //me.puppet.attr("x", "111");
+                  //me.puppet = xxxx
+
+                });
+                
+              });
+
+            });
+
+  
+          })
+
+                   
+          
+         
+      }
+//---------- --------- ----------
+
+        
+
+//---------------------
+      var stHairColor = {
+        name: 'hairrColor',
+        title: 'Hair Color',
+        pull: changeHairColor
+      }
+
+      var stLeftEarMove = {
+        name: 'stLeftEarMove',
+        title: 'Move Left Ear',
+        pull: leftEarMove
+      }
+      var stRightEarMove = {
+        name: 'stRightEarMove',
+        title: 'Move Right Ear',
+        pull: rightEarMove
+      }
+      var stEarsMove = {
+        name: 'stEarsMove',
+        title: 'Move Ears',
+        pull: earsMove
+      }
+      
+      var stEyesUpDown = {
+        name: 'eyesUpDown',
+        title: 'Eyes Up Down',
+        pull: eyesUpDown
+      }
+
+      var stEyesLeftRight = {
+        name: 'eyesLeftRight',
+        title: 'Eyes Left Right',
+        pull: eyesLeftRight
+      }
+      
+      var stSizePulse = {
+        name: 'sizePulse',
+        title: 'Size Pulse',
+        pull: pulseSize
+      }
+      
+      var stMovePulse = {
+        name: 'movePulse',
+        title: 'Move Pulse',
+        pull: pulseMove
+      }
+
+      
+      
+      me.strings.leftEar = stLeftEarMove;
+      me.strings.rightEar = stRightEarMove;
+      me.strings.ears = stEarsMove;
+      me.strings.eyesUpDown = stEyesUpDown;
+      me.strings.eyesLeftRight = stEyesLeftRight;
+
+      me.strings.sizePulse = stSizePulse;
+      me.strings.movePulse = stMovePulse;
+
+
+
+     me.earScale = d3.scaleLinear()
+				.domain([0, 255])
+				.range([90, 0])
+
+
+     me.eyesUpDownScale = d3.scaleLinear()
+				.domain([0, 255])
+				.range([11, 2])
+
+
+     me.eyesLeftRightScale = d3.scaleLinear()
+				.domain([0, 255])
+				.range([-3, 7])
+
+     me.sizePulseScale = d3.scaleLinear()
+				.domain([0, 255])
+				.range([1, 1.3])
+
+
+     me.movePulseScale = d3.scaleLinear()
+				.domain([0, 255])
+				.range([0, 200])
+
+
+
+     function leftEarMove(theVal){
+          var tmpD3El = me.leftEar.select("g");
+          var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = tmpBB.x ;
+          var tmpY = tmpBB.y + tmpBB.height - 3;
+          var tmpVal = me.earScale(theVal);
+          tmpD3El.attr('transform',"rotate(" + tmpVal + "," + tmpX + "," + tmpY + ")");
+      }
+
+     function rightEarMove(theVal){
+          var tmpD3El = me.rightEar.select("g");
+          var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = tmpBB.x + tmpBB.width;
+          var tmpY = tmpBB.y + tmpBB.height - 3;
+          var tmpVal = me.earScale(theVal);
+          tmpD3El.attr('transform',"rotate(-" + tmpVal + "," + tmpX + "," + tmpY + ")");
+      }
+
+      function earsMove(theVal){
+        rightEarMove(theVal);
+        leftEarMove(theVal);
+      }
+    
+     me.centerX = 1.8655143;
+     me.currentX = me.centerX;
+
+     me.centerY = 7.210905;
+     me.currentY = me.centerY;
+
+     function eyesUpDown(theVal){
+          var tmpD3El = me.pupils; //.select("g")
+          //var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = me.currentX;
+          var tmpY = me.eyesUpDownScale(theVal);
+          me.currentY = tmpY;
+          tmpD3El.attr('transform',"translate(" + tmpX + "," + tmpY + ")");
+      }
+
+     function eyesLeftRight(theVal){
+          var tmpD3El = me.pupils; //.select("g")
+          //var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = me.eyesLeftRightScale(theVal);
+          me.currentX = tmpX;
+          var tmpY = me.currentY;
+          tmpD3El.attr('transform',"translate(" + tmpX + "," + tmpY + ")");
+      }
+
+     function pulseSize(theVal){
+          var tmpD3El = me.puppet;
+          me.currentScale =  me.sizePulseScale(theVal);
+          //var tmpBB = tmpD3El.node().getBBox();
+          //var tmpX = me.eyesLeftRightScale(theVal);
+          //var tmpY = "7";
+          //tmpD3El.attr('transform',"scale(" + me.sizePulseScale(theVal) + ")");
+          pulseMove(me.currentPosVal);
+      }
+
+     function pulseMove(theVal){
+          me.currentPosVal = theVal;
+          me.currentPos = me.movePulseScale(theVal);
+          var tmpD3El = me.puppet; 
+          var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = me.currentPos || 0;
+          var tmpY = 0;
+          tmpD3El.attr('transform',"translate(" + tmpX + "," + tmpY + ") scale(" + me.currentScale + ")");
+      }
+
+
+
+
+
+      me.currentScale = 1;
+      me.currentPos = 0;
+            
+      me.strings.hairColor = stHairColor;
+			me.colorScale = d3.scaleSequential()
+				.domain([-55, 255])
+				.interpolator(d3.interpolateRainbow);
+
+      me.colorScaleTesting = d3.scaleSequential()
+				.domain([0, 255])
+				.interpolator(d3.interpolateHsl('hsl(-255, 100%, 50%)',' hsl(255, 100%, 50%)'));
+
+
+      function changeHairColor(theVal){
+         var tmpColor = me.colorScale(theVal);
+         $(me.hair.node()).css("fill",tmpColor);
+      }
+
+      return me;
+    };
+
+    ThisApp = (function () {
+      var me = {};
+      me.puppets = [];
+
+      
+      //--- Public
+      me.actions = {};
+
+      me.runTest = runTest;
+      function runTest() {
+        alert("HW");
+      }
+
+      me.init = init;
+      function init() {
+        initMenus();
+        initAppActions();
+
+        $('#ajax').jstree({
+          'core': {
+            'data': {
+              "url": "/data/root.json",
+              "dataType": "json"
+            }
+          }
+        });
+
+      }
+
+      me.registerAction = registerAction;
+      function registerAction(theActionName, theFunction) {
+        me.actions[theActionName] = theFunction;
+      }
+
+      //--- Local
+      function runAppAction(theAction, theSourceObject) {
+        var $src = $(theSourceObject);
+        var tmpAction = me.actions[theAction] || me[theAction];
+        if (tmpAction) {
+          tmpAction(theAction, theSourceObject);
+        } else {
+          console.error("No registered action for " + theAction);
+        }
+      }
+
+      function initMenus() {
+        $('.ui.sidebar').sidebar('attach events', '[semaction="showsidebar"]');
+      }
+
+      function initAppActions() {
+        $('[appuse="appbody"]').on("click", itemClicked)
+        $('[appuse="appbody"]').on("mousedown", instClicked)
+
+        //$('[appuse="appbody"]').get(0).addEventListener("click", itemClicked,false);
+      }
+
+      function instClicked(theEvent) {
+
+        theEvent.preventDefault();
+        theEvent.stopPropagation();
+      }
+      function itemClicked(theEvent) {
+        var tmpObj = theEvent.target || theEvent.currentTarget || theEvent.delegetTarget || {};
+        var tmpAction = $(tmpObj).attr("appaction") || "";
+        if (tmpAction) {
+          theEvent.preventDefault();
+          theEvent.stopPropagation();
+          runAppAction(tmpAction, tmpObj);
+        }
+        return false;
+      }
+
+      return me;
+    })();
+
+    $(document)
+      .ready(function () {
+
+
+
+
+        var svgControlPanel = d3.select('#svgControlPanel');
+        ThisApp.svgControls = svgControlPanel;
+
+        var svg = d3.select('[svgname="workspace"]')
+        var width = +svg.attr("width");
+        var height = +svg.attr("height");
+
+        ThisApp.svg = svg;
+        ThisApp.width = width;
+        ThisApp.height = height;
+
+
+        ThisApp.initWorkspace = function () {
+
+         ThisApp.puppets.sheep = new PulletTypeSheep();
+         ThisApp.puppets.sheep.init(ThisApp.svg);
+
+         //ThisApp.mainSliders = new StringSlider();
+         //ThisApp.mainSliders.init(ThisApp.svgControls);
+         //-------------------------------
+
+
+         var s = Snap("#svgControlPanel");
+
+
+// what we want to do when the slider changes. They could have separate funcs as the call back or just pick the right element
+var myDragFunc = function( el ) {
+    var tmpVal = parseInt("" + (el.data("fracX") * 255));
+    if(  el.data("sliderId") == "hairSlider"  ) return ThisApp.puppets.sheep.strings.hairColor.pull(tmpVal);
+    if(  el.data("sliderId") == "earsSlider"  ) return ThisApp.puppets.sheep.strings.ears.pull(tmpVal);
+    if(  el.data("sliderId") == "leftEarSlider"  ) return ThisApp.puppets.sheep.strings.leftEar.pull(tmpVal);
+    if(  el.data("sliderId") == "rightEarSlider"  ) return ThisApp.puppets.sheep.strings.rightEar.pull(tmpVal);
+    if(  el.data("sliderId") == "eyesUpDownSlider"  ) return ThisApp.puppets.sheep.strings.eyesUpDown.pull(tmpVal);
+    if(  el.data("sliderId") == "eyesLeftRightSlider"  ) return ThisApp.puppets.sheep.strings.eyesLeftRight.pull(tmpVal);
+    if(  el.data("sliderId") == "sizePulseSlider"  ) return ThisApp.puppets.sheep.strings.sizePulse.pull(tmpVal);
+    if(  el.data("sliderId") == "movePulseSlider"  ) return ThisApp.puppets.sheep.strings.movePulse.pull(tmpVal);
+    
+}
+
+
+var myDragEndFunc = function( el ) {
+
+}
+
+var myDragStartFunc = function() {
+
+}
+
+
+//create our sliders
+s.slider({ sliderId: "hairSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"0", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+
+s.slider({ sliderId: "rightEarSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"80", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+
+s.slider({ sliderId: "leftEarSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"130", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+s.slider({ sliderId: "earsSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"190", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+
+s.slider({ sliderId: "eyesUpDownSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"280", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+
+s.slider({ sliderId: "eyesLeftRightSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"340", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+
+s.slider({ sliderId: "sizePulseSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"400", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+
+s.slider({ sliderId: "movePulseSlider", capSelector: "#cap", filename: "slider2.svg",
+                x: "0", y:"460", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc } );
+
+/*
+var slider1 = s.slider({ sliderId: "slider1", capSelector: "#cap", filename: "paw.svg",
+                x: "40", y:"50", min: "0", max: "800",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc,
+                attr: { transform: 's0.4t-100,-300' } } );
+
+
+var sliderOnAngle = s.slider({ sliderId: "slider3", capSelector: "#cap", filename: "slider2.svg",
+                x: "140", y:"150", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc,
+                attr: { transform: 't150,150r45' } });
+
+var sliderInverted = s.slider({ sliderId: "slider4", capSelector: "#cap", filename: "slider2.svg",
+                x: "200", y:"200", min: "0", max: "400",
+                onDragEndFunc: myDragEndFunc, onDragStartFunc: myDragStartFunc, onDragFunc: myDragFunc,
+                attr: { transform: 't50,150r180' } });
+
+*/
+
+        }
+
+        ThisApp.initWorkspace();
+
+
+        ThisApp.loadSVG = function () {
+
+        }
+        
+/*
+        ThisApp.rotateLeftEar = function(theEl ){
+          var tmpD3El = theEl;
+          var tmpCurrentLoc = ThisApp.rotateLeftEarLoc || 0;
+          tmpCurrentLoc += 10;
+          if( tmpCurrentLoc > 90 ){
+            tmpCurrentLoc = 0;
+          }
+          ThisApp.rotateLeftEarLoc = tmpCurrentLoc;
+          var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = tmpBB.x ;
+          var tmpY = tmpBB.y + tmpBB.height - 3;
+          tmpD3El.attr('transform',"rotate(" + tmpCurrentLoc + "," + tmpX + "," + tmpY + ")");;            
+        }
+
+        ThisApp.rotateRightEar = function(theEl ){
+          var tmpD3El = theEl;
+          var tmpCurrentLoc = ThisApp.rotateRightEarLoc || 0;
+          tmpCurrentLoc += 10;
+          if( tmpCurrentLoc > 90 ){
+            tmpCurrentLoc = 0;
+          }
+          ThisApp.rotateRightEarLoc = tmpCurrentLoc;
+          var tmpBB = tmpD3El.node().getBBox();
+          var tmpX = tmpBB.x + tmpBB.width;
+          var tmpY = tmpBB.y + tmpBB.height - 3;
+          //tmpD3El.attr('transform',"rotate(-30," + tmpX + "," + tmpY + ")");;            
+          tmpD3El.attr('transform',"rotate(-" + tmpCurrentLoc + "," + tmpX + "," + tmpY + ")");;            
+        }
+
+
+        ThisApp.details = {
+          "sheepears-left" : {rotate: ThisApp.rotateLeftEar},
+          "sheepears-right" : {rotate: ThisApp.rotateRightEar}
+
+        };
+
+        ThisApp.earClick = function (theEvent) {
+          var tmpSVG = theEvent.delegateTarget || theEvent.currentTarget
+          var tmpDetails = ThisApp.details[tmpSVG.id];
+          console.log("tmpSVG.id " + tmpSVG.id);
+          var tmpD3El = d3.select('#' + tmpSVG.id);
+          //tmpD3El = tmpD3El.select('g').attr('transform',"translate(0,10)");;
+          tmpD3El = tmpD3El.select('g')
+          tmpDetails.rotate(tmpD3El, tmpSVG.id);
+         
+          //var tmpBB = d3.select('#' + tmpSVG.id).node().getBBox(); //tmpSVG.getBBox();
+          //console.log("BB for " + tmpSVG.id, tmpBB);
+          //d3.select('#' + tmpSVG.id + " g").attr('transform',"translate(0,10)");
+         
+        }
+
+*/
+        ThisApp.fullGroupClick = function (theEvent) {
+          console.log("theEvent", theEvent);
+
+          var me = ThisApp.$fullGroup.node()
+          console.log("BB", me.getBBox());
+          return;
+
+          d3.select("#fullGroup").attr('transform', function () {
+            var x1 = theEvent.clientX - theEvent.offsetX; //me.getBBox().x; // + me.getBBox().width/2;//the center x about which you want to rotate
+            var y1 = theEvent.clientY - theEvent.offsetY; // me.getBBox().y + me.getBBox().height;//the center y about which you want to rotate
+
+            console.log('tf' + `rotate(90, ${x1}, ${y1})`);
+            //x1 = me.getBBox().x - (11.22532);
+            //y1 = me.getBBox(.y - (9.087164);
+            return `rotate(90, ${x1}, ${y1})`;//rotate 180 degrees about x and y
+          });
+
+        }
+        ThisApp.loadDemoTree = function () {
+
+          var tmpJsonObj = [{
+            "id": 1,
+            "text": "Outline",
+            "icon": "cubes icon",
+            "state": {
+              "opened": true,
+              "selected": true
+            },
+            "children": [{
+              "id": 2,
+              "text": "Group",
+              "icon": "group object icon",
+              "children": [{
+                "id": 211,
+                "text": "id 211",
+                "icon": "circle red icon"
+              },
+              {
+                "id": 212,
+                "text": "id 212",
+                "icon": "circle blue icon"
+              }]
+            },
+            {
+              "id": 3,
+              "text": "id 3",
+              "icon": "cube icon"
+            },
+            {
+              "id": 4,
+              "text": "id 4",
+              "icon": "cube icon"
+            }]
+          }];
+
+
+          $('#ajax').jstree(true).settings.core.data = tmpJsonObj;
+          $('#ajax').jstree(true).refresh();
+
+        }
+
+
+
+
+        //--- Standard functionality
+        ThisApp.showPage = function (theAction, theTargetObj) {
+          var tmpPage = $(theTargetObj).attr("pagename") || '';
+          if (tmpPage) {
+            $('[pagefor]').addClass('hidden')
+            $('[pagename]').removeClass('active');
+
+            $('[pagefor]').transition('hide', 1);
+
+            //$('[pagefor="' + tmpPage + '"]').removeClass('hidden');
+            $('[pagename="' + tmpPage + '"]').addClass('active');
+            //$('[pagename="' + tmpPage + '"]').transition('vertical flip in');
+            $('[pagefor="' + tmpPage + '"]').transition('flip horizontal in');
+
+            $('.ui.sidebar').sidebar('hide');
+          } else {
+            alert("no pagename");
+          }
+        }
+
+
+
+
+        ThisApp.init();
+
+
+
+
+      })
+      ;
+  </script>
+
+</body>
+
+</html>

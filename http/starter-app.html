@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="lib/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="css/appframe.css">
+
+  <title>Slider Demo Application</title>
+
+</head>
+
+<body appuse="appbody">
+
+  <!-- Sidebar Menu -->
+  <div appuse="sidemenu" class="ui vertical inverted sidebar menu">
+    <a appaction="toggleFlow" class="mobileonly active item">Toggle</a>
+    <a pagename="helmet" appaction="showPage" class="mobileonly item">Helmet</a>
+    <a pagename="graph" appaction="showPage" class="mobileonly item">Graph</a>
+    <a pagename="about" appaction="showPage" class="item">About this demo</a>
+  </div>
+
+
+  <!-- Page Contents -->
+  <div class="appbody pusher">
+
+    <div class=" ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container">
+
+        <div appuse="topmenu" class="ui large secondary inverted pointing menu">
+          <a semaction="showsidebar" class="toc item">
+          <i class="sidebar icon"></i>
+		</a>
+          <a semaction="showsidebar" class=" item">
+          <i class="sidebar icon"></i>
+		</a>
+          <a pagename="helmet" appaction="showPage" class="active item">Helmet</a>
+          <a pagename="graph" appaction="showPage" class="item">Graph</a>
+          <!--        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+
+-->
+          <div class="right item">
+            <a appaction="toggleFlow" class="ui inverted button">Toggle</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Body Here -->
+    <div class="ui segment basic inverted" style="padding:0;margin:0">
+      <div class="ui equal width stackable internally celled grid">
+        <div class="center aligned row">
+          <div class="column">
+
+            <svg class="hidden" svgname="graph" pagefor="graph" style="padding:0;margin:0" viewBox="0 0 400 400">
+              <g appuse="graphwrap" transform="scale(8)">
+                  <ellipse style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                  id="graph1" cx="13.181919" cy="20.888393" rx="0.9921875" ry="0.8976934" />
+              </g>
+            </svg>
+
+            <svg svgname="helmet" pagefor="helmet" style="padding:0;margin:0" viewBox="0 0 400 400">
+
+            </svg>
+            <div pagefor="about" class="hidden" >See links for more stuff</div>  
+          </div>
+          <div class="column">
+            <div pagefor="graph" class="hidden" >This is a SVG graph created using D3.</div>
+            <div pagefor="helmet" >This is a SVG graphic that is being modified using D3.</div>
+            <div pagefor="about" class="hidden" >This application was created by Joseph Francis.</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- End Body -->
+
+    <!-- Footer -->
+    <div class="hidden ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="three wide column">
+            <h4 class="ui inverted header">Left</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">Left One</a>
+              <a href="#" class="item">Left Two</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">Center</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">Center One</a>
+              <a href="#" class="item">Center Two</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header">Wide Right</h4>
+            <p>Laces Out!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!--   End of page *****************************************  -->
+
+  <script src="lib/base/jquery.min.js"></script>
+  <script src="lib/base/lodash.min.js"></script>
+  <script src="lib/base/angular.min.js"></script>
+  <script src="lib/semantic/dist/semantic.min.js"></script>
+  <script src="lib/d3/d3.min.js"></script>
+
+
+  <script>
+    ThisApp = (function () {
+      var me = {};
+
+      //--- Public
+      me.actions = {};
+
+      me.runTest = runTest;
+      function runTest() {
+        alert("HW");
+      }
+
+      me.init = init;
+      function init() {
+        initMenus();
+        initAppActions();
+      }
+
+      me.registerAction = registerAction;
+      function registerAction(theActionName, theFunction) {
+        me.actions[theActionName] = theFunction;
+      }
+
+      //--- Local
+      function runAppAction(theAction, theSourceObject) {
+        var $src = $(theSourceObject);
+        var tmpAction = me.actions[theAction] || me[theAction];
+        if (tmpAction) {
+          tmpAction(theAction, theSourceObject)
+        } else {
+          console.error("No registered action for " + theAction);
+        }
+      }
+
+      function initMenus() {
+        $('.ui.sidebar').sidebar('attach events', '[semaction="showsidebar"]');
+      }
+
+      function initAppActions() {
+        $('[appuse="appbody"]').on("click", itemClicked)
+      }
+
+      function itemClicked(theEvent) {
+        //    console.log("theEvent ",theEvent);
+        //		console.log("currentTarget ",theEvent.currentTarget);
+        var tmpObj = theEvent.target || theEvent.currentTarget || theEvent.delegetTarget || {};
+        var tmpAction = $(tmpObj).attr("appaction") || "";
+        if (tmpAction) {
+          runAppAction(tmpAction, tmpObj);
+        }
+      }
+
+
+      return me;
+    })();
+
+    $(document)
+      .ready(function () {
+
+
+        var svg = d3.select('[svgname="helmet"]')
+        var width = +svg.attr("width");
+        var height = +svg.attr("height");
+
+        ThisApp.svg = svg;
+        ThisApp.width = width;
+        ThisApp.height = height;
+
+
+        ThisApp.initHelmet = function () {
+        
+        }
+
+        ThisApp.initHelmet();
+
+
+
+
+        ThisApp.showPage = function (theAction, theTargetObj) {
+          var tmpPage = $(theTargetObj).attr("pagename") || '';
+          if (tmpPage) {
+            $('[pagefor]').addClass('hidden')
+            $('[pagename]').removeClass('active');
+            
+            $('[pagefor]').transition('hide',1);
+
+            //$('[pagefor="' + tmpPage + '"]').removeClass('hidden');
+            $('[pagename="' + tmpPage + '"]').addClass('active');
+            //$('[pagename="' + tmpPage + '"]').transition('vertical flip in');
+            $('[pagefor="' + tmpPage + '"]').transition('flip horizontal in');
+
+            $('.ui.sidebar').sidebar('hide');
+          } else {
+            alert("no pagename");
+          }
+        }
+        
+        $(window).on('resize', updateWindow);
+
+        function updateWindow() {
+
+          var x = window.innerWidth;
+          var y = window.innerHeight;
+
+          console.log("x " + x);
+          console.log("y " + y);
+        }
+
+
+
+
+        ThisApp.init();
+
+
+      })
+      ;
+
+  </script>
+
+</body>
+
+</html>

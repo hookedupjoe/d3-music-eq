@@ -1,0 +1,36 @@
+[{
+	"id": 1,
+	"text": "Root node",
+	"icon": "address book outline icon",
+	"state": {
+		"opened": true,
+		"selected": true
+	},
+	"children": [{
+		"id": 2,
+		"text": "Favs",
+		"icon": "heartbeat icon",
+		"children": [
+			{
+				"id": 211,
+				"text": "One of my favs here",
+				"icon": "circle red icon"
+			},
+			{
+				"id": 212,
+				"text": "Another of my favs here",
+				"icon": "circle blue icon"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"text": "Printers",
+		"icon": "print icon"
+	},
+	{
+		"id": 4,
+		"text": "Child node 3",
+		"icon": "edit icon"
+	}]
+}]

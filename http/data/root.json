@@ -1,0 +1,9 @@
+[{
+	"id": 1,
+	"text": "Outline",
+	"icon": "cubes icon",
+	"state": {
+		"opened": true,
+		"selected": true
+	}
+}]

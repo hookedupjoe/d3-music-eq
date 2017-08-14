@@ -1,0 +1,5 @@
+<svg>
+    <rect x="100" y="25" width="400" height="5" fill="#770000" stroke="black" stroke-width="2" />
+    <circle id="cap" cx="100" cy="30" r="20" fill="#770000" stroke="black" stroke-width="4"/>
+</svg>
+
